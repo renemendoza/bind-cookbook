@@ -17,12 +17,11 @@
 # limitations under the License.
 #
 #
-include_recipe "bind"
+#include_recipe "bind"
 
 template "/tmp/ddns_update" do 
   source "ddns_update.erb"
-  mode 0644
-  variables( :ddns_name => "clon.zefironetworks.com." 
-  )
+  mode 0755
+  variables( :ddns_name => "clon.zefironetworks.com." )
 end
 
