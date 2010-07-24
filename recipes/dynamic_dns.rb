@@ -20,7 +20,7 @@
 include_recipe "bind"
 
 template "/tmp/ddns_update" do 
-  source "dynamic_dns/ddns_update.erb"
+  source "ddns_update.erb"
   mode 0644
   variables( :ddns_name => "clon.zefironetworks.com." 
   )
