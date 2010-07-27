@@ -5,10 +5,10 @@
 TTL=3600
 SERVER=ns1.zefironetworks.com
 ZONE=zefironetworks.com
-HOSTNAME=<%= @ddns_name %>
-#maybe we can also use node[:fqdn]
+HOSTNAME=<%= @node[:fqdn] %>
 
-KEYFILE="/etc/dyndns_keys/key.private"
+#KEYFILE="/etc/dyndns_keys/key.private"
+KEYFILE=<%= @private_key %>
 
 nsupdate -v -k  $KEYFILE > /dev/null << EOF
 server $SERVER
