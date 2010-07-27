@@ -22,7 +22,7 @@
 template "/tmp/ddns_update" do 
   source "ddns_update.erb"
   mode 0755
-  variables( :private_key => "/etc/dyndns_keys/Kclon.zefironetworks.com.+157+59025.private", )
+  variables( :private_key => "/etc/dyndns_keys/Kclon.zefironetworks.com.+157+59025.private", 
              :public_key => "/etc/dyndns_keys/Kclon.zefironetworks.com.+157+59025.key" )
 end
 
