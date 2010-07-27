@@ -1,5 +1,6 @@
 = DESCRIPTION:
 Bind 9 cookbook for Chef
+dyndns recipe
 
 = REQUIREMENTS:
 
