@@ -8,7 +8,7 @@ ZONE=zefironetworks.com
 HOSTNAME=<%= @node[:fqdn] %>
 
 #KEYFILE="/etc/dyndns_keys/key.private"
-KEYFILE=<%= @private_key %>
+KEYFILE=<%= @node[:dynamic_dns][:tsig_private] %>
 
 nsupdate -v -k  $KEYFILE > /dev/null << EOF
 server $SERVER
